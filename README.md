@@ -18,6 +18,7 @@ I didn't just find some primes; I rebuilt the basics of computing in a language 
 - **Zero-Library Independence:** Compiled with `-E`. This thing doesn't use a single external library or the standard `syslib.i`. It’s a total loner.
 - **Full 16-bit Sieve:** Instead of stopping at 1,000, it exhausts the entire 16-bit space (up to 65,535) in about 17 seconds.
 - **C-Powered "Double-Pipe" Logger:** Since 65,000 primes will absolutely murder your terminal scrollback buffer, I built a C logger to save everything to `primes.txt` while you watch it happen.
+- **The "Humanizer" (C++ Converter):** Because reading Roman numerals makes my eyes bleed, I added a C++ post-processor to turn the `primes.txt` into standard decimal numbers in `primes_in_decimal.txt`.
 
 ---
 
@@ -48,6 +49,12 @@ Forget `if/else` or `while` loops. INTERCAL uses `COME FROM`.
 - Instead of saying "if prime, go to line 5", I have to go to line 5 and say "COME FROM line 2 IF the prime-check passed".
 - It makes the logic flow backward and inside-out. It’s the primary reason I spent four hours staring at a wall today.
 
+### 5. The "Humanizer" Logic
+The C++ converter is a bit of a relief after all that INTERCAL. It parses the Roman numerals but has to handle the overline (underscores) properly.
+- INTERCAL outputs a line of underscores *above* any character that should be multiplied by 1000.
+- `LXVCDLXXIX` for 65,479 actually appears in the text as `___` then the Roman string.
+- The C++ tool counts those underscores and correctly splits the string into "thousands" and "ones" before doing the math.
+
 ---
 
 ##  How to Read the Output (Butchered Roman Numerals)
@@ -65,8 +72,10 @@ If you see something like `LXVCDLXXIX`, don't panic. It’s not broken; it’s j
 
 1. **Get the compiler:** You need `ick` (C-INTERCAL). 
 2. **Compile the Sieve:** Run `ick -E primes.i`. This creates the `primes` binary.
-3. **Compile the Logger:** Run `gcc logger.c -o logger`.
+3. **Compile the Tools:** 
+   - `gcc logger.c -o logger`
+   - `g++ roman_to_decimal.cpp -o roman_to_decimal`
 4. **Execute:** `./logger`
-5. **Watch the magic:** It’ll spit out `II`, `III`, `V`, `VII`... as weird Roman numerals on your screen AND save them all into `primes.txt`.
+5. **Watch the magic:** It’ll spit out Roman numerals on your screen, save them to `primes.txt`, and then *automatically* convert them all to decimal in `primes_in_decimal.txt`.
 
 It worked. Thanks, Sophie :)

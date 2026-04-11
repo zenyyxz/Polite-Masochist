@@ -38,5 +38,13 @@ int main() {
     fclose(out);
 
     printf("\nDone. All primes saved to primes.txt\n");
+
+    printf("Converting primes.txt to decimal format (primes_in_decimal.txt)...\n");
+    if (system("./roman_to_decimal") == 0) {
+        printf("Conversion complete.\n");
+    } else {
+        fprintf(stderr, "Error: Could not run roman_to_decimal converter.\n");
+    }
+
     return 0;
 }
