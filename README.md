@@ -1,4 +1,4 @@
-# Polite Masochist 🧙‍♂️
+# Polite Masochist 
 
 Sophie actually dared me to do this. She knew I needed a massive distraction today—April 11th is just one of those dates that needs to be buried under a mountain of total nonsense. 
 
@@ -8,7 +8,7 @@ It's absolute madness. INTERCAL doesn't even have an addition operator. I had to
 
 ---
 
-## 🚀 The Flex List (What's under the hood)
+##  The Flex List (What's under the hood)
 
 I didn't just find some primes; I rebuilt the basics of computing in a language designed to be impossible. Here’s the raw list of what’s in this file:
 
@@ -21,7 +21,7 @@ I didn't just find some primes; I rebuilt the basics of computing in a language 
 
 ---
 
-## 🤓 The Nerd Wiki (Everything Built From Scratch)
+##  The Nerd Wiki (Everything Built From Scratch)
 
 Since I used the `-E` flag to ban all external libraries, I had to manually build the "brain" of the program inside the source file. Here’s what’s actually happening under the hood:
 
@@ -50,7 +50,7 @@ Forget `if/else` or `while` loops. INTERCAL uses `COME FROM`.
 
 ---
 
-## 🏛️ How to Read the Output (Butchered Roman Numerals)
+##  How to Read the Output (Butchered Roman Numerals)
 
 If you see something like `LXVCDLXXIX`, don't panic. It’s not broken; it’s just INTERCAL being itself. 
 
@@ -69,4 +69,4 @@ If you see something like `LXVCDLXXIX`, don't panic. It’s not broken; it’s j
 4. **Execute:** `./logger`
 5. **Watch the magic:** It’ll spit out `II`, `III`, `V`, `VII`... as weird Roman numerals on your screen AND save them all into `primes.txt`.
 
-It worked. I'm definitely distracted. Thanks, Sophie.
+It worked. Thanks, Sophie :)
