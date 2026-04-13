@@ -1,10 +1,8 @@
 # Polite Masochist 
 
-Sophie actually dared me to do this. She knew I needed a massive distraction today—April 11th is just one of those dates that needs to be buried under a mountain of total nonsense. 
+This project is an independent prime number sieve implemented in INTERCAL. It operates without external libraries (no `syslib.i`) and calculates primes from zero by implementing fundamental computational logic from scratch.
 
-I have no idea why I went through with it, but I had this weird itch to see if I could make a prime number sieve in INTERCAL that was actually, 100% independent. No cheating with `syslib.i`, no pre-calculated Python loops, no shortcuts. Just one big, messy file that calculates every single prime from absolute zero while it runs.
-
-It's absolute madness. INTERCAL doesn't even have an addition operator. I had to literally rip the bitwise adder logic out of the compiler's guts and glue it into the source just to make a counter work. 
+INTERCAL lacks an addition operator. This implementation uses bitwise logic derived from the compiler's internal adder to manage counters and arithmetic.
 
 ---
 
@@ -77,5 +75,3 @@ If you see something like `LXVCDLXXIX`, don't panic. It’s not broken; it’s j
    - `g++ roman_to_decimal.cpp -o roman_to_decimal`
 4. **Execute:** `./logger`
 5. **Watch the magic:** It’ll spit out Roman numerals on your screen, save them to `primes.txt`, and then *automatically* convert them all to decimal in `primes_in_decimal.txt`.
-
-It worked. Thanks, Sophie :)
